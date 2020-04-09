@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">login-galeria</string>
+    <string name="todo">TODO</string>
+    <string name="avancar">avancar</string>
+    <string name="textview">textview</string>
+    <string name="recuar">recuar</string>
+    <string name="acesso">ACESSO</string>
+    <string name="nome">Nome</string>
+    <string name="senha">Senha</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="marque_esta_op_o_se_voc_deseja_cadastrar_seu_usu_rio_e_senha">Marque esta opção se você deseja cadastrar seu usuário e senha</string>
+    <string name="go">Go</string>
+    <string name="digite_seu_nome">Digite seu nome</string>
 </resources>

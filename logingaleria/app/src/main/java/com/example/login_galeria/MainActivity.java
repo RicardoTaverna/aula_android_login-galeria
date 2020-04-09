@@ -3,6 +3,7 @@ package com.example.login_galeria;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         switchCadastro = findViewById(R.id.switchCadastro);
         inputNome = findViewById(R.id.inputNome);
         inputSenha = findViewById(R.id.inputSenha);
+        buttonGo = findViewById(R.id.buttonGo);
 
         switchCadastro.setChecked(false);
         switchCadastro.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -63,11 +65,14 @@ public class MainActivity extends AppCompatActivity {
 
             if (SingletonCredenciais.getInstance().checkAutenticado(u)){
                 //direciona para segunda tela
-                AlertDialog.Builder alert = new AlertDialog.Builder(this);
-                alert.setTitle("Deu boa");
-                alert.setMessage("Usuário autenticado");
-                AlertDialog dialog = alert.create();
-                dialog.show();
+                buttonGo.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(MainActivity.this, Main2Activity.class);
+                        startActivity(intent);
+                    }
+                });
+
             } else {
                 AlertDialog.Builder alert = new AlertDialog.Builder(this);
                 alert.setTitle("Atenção");
